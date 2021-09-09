@@ -3,7 +3,7 @@ from fmpy.fmi2 import FMU2Slave
 import shutil
 
 # define the model name and simulation parameters
-fmuPath = 'G:/FMUs/SampleModel.fmu'
+fmuPath = 'MNav.fmu'
 start_time = 0.0
 stop_time = 120.0
 threshold = 2.0
@@ -12,11 +12,11 @@ step_size = 1.0
 
 model_description = read_model_description(fmuPath)
 
-# Open a file: file
-file = open('C:/Users/gorog/Desktop/rows.json', mode='r', encoding='UTF8')
+# Open a file
+file = open('input.json', mode='r', encoding='UTF8')
 
-# read all lines at once
-all_of_it = file.read()
+# read json
+json_string = file.read()
 
 # close the file
 file.close()
@@ -26,8 +26,8 @@ vrs = {}
 for variable in model_description.modelVariables:
     vrs[variable.name] = variable.valueReference
 
-fmu_input = vrs['strInput']
-fmu_output = vrs['strOutput']
+fmu_input = vrs['input']
+fmu_output = vrs['output']
 
 # extract the FMU
 unzipdir = extract(fmuPath)
@@ -49,15 +49,18 @@ rows = []  # list to record the results
 
 # simulation loop
 while current_time < stop_time:
+    # Master code .. (doing something for input values)
+
     # set the input
-    fmu.setString([input], [all_of_it])
+    fmu.setString([fmu_input], [json_string])
 
     # perform one step
     fmu.doStep(currentCommunicationPoint=current_time, communicationStepSize=step_size)
 
     # set the output
-    [outputs4] = fmu.getString([fmu_output])
-    strOut = outputs4.decode('utf8')
+    [output_value] = fmu.getString([fmu_output])
+
+    # Master code .. (doing something using output values)
 
     # advance the time
     current_time += step_size

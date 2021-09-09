@@ -1,0 +1,193 @@
+{
+    "Simulation_Setting" : {
+        "UseVTS" : "Y or N",
+        "StartTime" : "YYYYMMDDHHmmss",
+        "EndTime" : "YYYYMMDDHHmmss",
+        "StepSize" : "1",
+        "Traffic" : "초기 선박 대수"
+    },
+    "Simulation_Status" : {
+        "Status" : "Start or Pause or Stop"
+    },
+    "Ship_Dynamic": [
+        {
+            "MMSI": "mmsi",
+            "Latitude": "위도(degree)",
+            "Longitude": "경도(degree)",
+            "SOG": "운항 속도(m/s)",
+            "COG": "침로(degree)",
+            "Heading" : ""
+        },
+        {
+            "MMSI": "mmsi",
+            "Latitude": "위도(degree)",
+            "Longitude": "경도(degree)",
+            "SOG": "운항 속도(m/s)",
+            "COG": "침로(degree)",
+            "Heading" : ""
+        }
+    ],
+    "Ship_Static": [
+        {
+            "MMSI": "mmsi",
+            "ShipName": "선명",
+            "ShipType": "선종",
+            "Length": "길이(m)",
+            "Width": "폭(m)",
+            "Unmanned": "Y or N",
+            "Experience_ID" : true,
+            "Skill_ID" : true,
+            "Tiredness_ID" : true
+        },
+        {
+            "MMSI": "mmsi",
+            "ShipName": "선명",
+            "ShipType": "선종",
+            "Length": "길이(m)",
+            "Width": "폭(m)",
+            "Unmanned": "Y or N",
+            "Experience_ID" : true,
+            "Skill_ID" : true,
+            "Tiredness_ID" : true
+        }
+    ],
+    "New_Ship_Static" : [
+        {
+            "MMSI": "mmsi",
+            "ShipName": "선명",
+            "ShipType": "선종",
+            "Length": "길이(m)",
+            "Width": "폭(m)",
+            "Unmanned": "Y or N"
+        },
+        {
+            "MMSI": "mmsi",
+            "ShipName": "선명",
+            "ShipType": "선종",
+            "Length": "길이(m)",
+            "Width": "폭(m)",
+            "Unmanned": "Y or N"
+        }
+    ],
+    "End_Ship_Static" : [
+        "사라지는 선박의 mmsi", "사라지는 선박의 mmsi"
+    ],
+    "Route": [
+        {
+            "MMSI": "mmsi",
+            "WPs": [
+                {
+                    "Latitude": "위도(degree)",
+                    "Longitude": "경도(degree)",
+                    "Speed": "속도(m/s)"
+                },
+                {
+                    "Latitude": "위도(degree)",
+                    "Longitude": "경도(degree)",
+                    "Speed": "속도(m/s)"
+                },
+                {
+                    "Latitude": "위도(degree)",
+                    "Longitude": "경도(degree)",
+                    "Speed": "속도(m/s)"
+                }
+            ]
+        },
+        {
+            "MMSI": "mmsi",
+            "WPs": [
+                {
+                    "Latitude": "위도(degree)",
+                    "Longitude": "경도(degree)",
+                    "Speed": "속도(m/s)"
+                },
+                {
+                    "Latitude": "위도(degree)",
+                    "Longitude": "경도(degree)",
+                    "Speed": "속도(m/s)"
+                },
+                {
+                    "Latitude": "위도(degree)",
+                    "Longitude": "경도(degree)",
+                    "Speed": "속도(m/s)"
+                }
+            ]
+        },
+        {
+            "MMSI": "mmsi",
+            "WPs": [
+                {
+                    "Latitude": "위도(degree)",
+                    "Longitude": "경도(degree)",
+                    "Speed": "속도(m/s)"
+                },
+                {
+                    "Latitude": "위도(degree)",
+                    "Longitude": "경도(degree)",
+                    "Speed": "속도(m/s)"
+                },
+                {
+                    "Latitude": "위도(degree)",
+                    "Longitude": "경도(degree)",
+                    "Speed": "속도(m/s)"
+                }
+            ]
+        }
+    ],
+    "VTS_Message" :
+    [
+        {
+            "MMSI" : "대상선박 MMSI",
+            "MMSI_TARGET" : "대상선박의 타켓선박 MMSI",
+            "Time" : "메시지 발생 시간",
+            "MSG_TABLE_NAME" : "메시지 테이블명",
+            "MSG_ID" : "메시지 ID",
+            "MSG_Level" : "메시지 적용 단계",
+            "MSG" : "관제메시지"
+        },
+        {
+            "MMSI" : "대상선박 MMSI",
+            "MMSI_TARGET" : "대상선박의 타켓선박 MMSI",
+            "Time" : "메시지 발생 시간",
+            "MSG_Level" : "메시지 적용 단계",
+            "MSG" : "관제메시지"
+        },
+        {
+            "MMSI" : "대상선박 MMSI",
+            "MMSI_TARGET" : "대상선박의 타켓선박 MMSI",
+            "Time" : "메시지 발생 시간",
+            "MSG_Level" : "메시지 적용 단계",
+            "MSG" : "관제메시지"
+        },
+        {
+            "MMSI" : "대상선박 MMSI",
+            "MMSI_TARGET" : "대상선박의 타켓선박 MMSI",
+            "Time" : "메시지 발생 시간",
+            "MSG_Level" : "메시지 적용 단계",
+            "MSG" : "관제메시지"
+        }
+    ],
+    "Env" : [
+        {
+            "MMSI" : "대상선박 MMSI",
+            "Depth" : "수심(m)",
+            "Tide" : "조위(m)",
+            "Current_Dir" : "조류방향(degree)",
+            "Current_Spd" : "조류속도(m/s)"   
+        },
+        {
+            "MMSI" : "대상선박 MMSI",
+            "Depth" : "수심(m)",
+            "Tide" : "조위(m)",
+            "Current_Dir" : "조류방향(degree)",
+            "Current_Spd" : "조류속도(m/s)"   
+        }
+    ],
+    "Env_Static" : {
+        "Wind_Dir" : "풍향(degree)",
+        "Wind_Spd" : "풍속(m/s)",
+        "Wave_Dir" : "파향(degree)",
+        "Wave_Spd" : "파속(m/s)",
+        "Visibility" : "시정(m)"
+    }
+}
